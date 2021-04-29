@@ -54,6 +54,6 @@ con.commit()
 SQL STATEMENT:
 
 INSERT INTO VACCINATION (Customer Name, Customer ID, Customer Open date, Vaccination ID, DR_Name, State, Country, DOB, FLAG) 
-VALUES( 'Alex', 123457, 20101012, 20121013, 'MVD', ' Paul', ' SA', ' USA', ' 6031987', ' A'),  ('John', 123458, 20101012, 20121013, 'MVD', ' TN', ' IND',  6031987, 'A'), ('Mathew',  123459, 20101012, 20121013, 'MVD', ' WAS', ' PHIL',  6031987, 'A'), ('Matt',  12345, 20101012, 20121013, 'MVD', ' BOS', 'NYC',  6031987, 'A'), ('Jacob 1256', 20101012, 20121013, 'MVD', ' VIC AU',  6031987, 'A') ;
+VALUES( 'Alex', '123457', '20101012', '20121013', 'MVD', ' Paul', ' SA', ' USA', ' 6031987', ' A'),  ('John', '123458', '20101012', '20121013', 'MVD', ' TN', ' IND',  '6031987', 'A'), ('Mathew',  '123459', '20101012', '20121013', 'MVD', ' WAS', ' PHIL',  '6031987', 'A'), ('Matt', '12345', '20101012', '20121013', 'MVD', ' BOS', 'NYC', '6031987', 'A'), ('Jacob 1256', '20101012', '20121013', 'MVD', ' VIC AU',  '6031987', 'A') ;
 
 
