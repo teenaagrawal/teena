@@ -1,0 +1,59 @@
+TO CREATE DATABASE IN PYTHON:
+
+import mysql.connector
+con=mysql.connector.connect (
+host='localhost',
+user='root',
+password='123')
+cur=con.cursor()
+cur.execute("Create Database vacccination")
+print ("database created successful..")
+
+
+TO CREATE TABLE IN DATABASE IN PYTHON:
+import mysql.connector
+con=mysql.connector.connect (
+host='localhost',
+user='root',
+password='123'
+database='vaccination')
+cur=con.cursor()
+cur.execute("Create table Table_India (Customer Name VARCHAR(255), Customer ID VARCHAR(18), Customer Open Date DATE(8), Last Consulted Date DATE(8), Vaccination Type CHAR (5), Doctor Consulted CHAR(255), State CHAR(5), Country CHAR(5), Post Code int(5), Date of Birth DATE(8), Active Customer CHAR(1) )")
+
+SQL STATEMENT:
+
+CREATE TABLE VACCINATION (
+Customer Name VARCHAR(255),
+Customer ID VARCHAR(18),
+Customer Open Date DATE(8),
+Last Consulted Date DATE(8),
+Vaccination Type CHAR(5),
+Doctor Consulted CHAR(255),
+State CHAR(5),
+Country CHAR(5),
+Post Code int(5),
+Date of Birth DATE(8),
+Active Customer CHAR(1)
+);
+
+TO ADD VALUES IN TABLE IN PYTHON:
+
+import mysql.connector
+con=mysql.connector.connect (
+host='localhost',
+user='root',
+password='123'
+database='vaccination')
+cur=con.cursor()
+s="INSERT INTO  Table_India (Customer Name, Customer ID, Customer Open date, Vaccination ID, DR_Name, State, Country, DOB, FLAG) VALUES (%S, %S, %S, %S, %S, %S, %S, %S, %S, %S)"
+Tables=[( 'Alex', 123457, 20101012, 20121013, 'MVD', ' Paul', ' SA', ' USA', 6031987, ' A'), ('John', 123458, 20101012, 20121013, 'MVD', ' TN', ' IND',  6031987, 'A'), ('Mathew',  123459, 20101012, 20121013, 'MVD', ' WAS', ' PHIL',  6031987, 'A'), ('Matt',  12345, 20101012, 20121013, 'MVD', ' BOS', 'NYC',  6031987, 'A'), ('Jacob 1256', 20101012, 20121013, 'MVD', ' VIC AU',  6031987, 'A') ]
+cur.executemany(s, Tables)
+con.commit()  
+
+
+SQL STATEMENT:
+
+INSERT INTO VACCINATION (Customer Name, Customer ID, Customer Open date, Vaccination ID, DR_Name, State, Country, DOB, FLAG) 
+VALUES( 'Alex', 123457, 20101012, 20121013, 'MVD', ' Paul', ' SA', ' USA', ' 6031987', ' A'),  ('John', 123458, 20101012, 20121013, 'MVD', ' TN', ' IND',  6031987, 'A'), ('Mathew',  123459, 20101012, 20121013, 'MVD', ' WAS', ' PHIL',  6031987, 'A'), ('Matt',  12345, 20101012, 20121013, 'MVD', ' BOS', 'NYC',  6031987, 'A'), ('Jacob 1256', 20101012, 20121013, 'MVD', ' VIC AU',  6031987, 'A') ;
+
+
